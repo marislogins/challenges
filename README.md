@@ -1,1 +1,3 @@
-# training
+Free time challenges...
+
+Copyright (c) 2017 Maris Logins
