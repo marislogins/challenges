@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+# Example: 5802
 
 puts "Type a number:"
 @number = gets.chomp.to_i

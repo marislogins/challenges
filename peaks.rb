@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+# Example: 1, 2, 3, 4, 3, 4, 1, 2, 3, 4, 6, 2
 
 puts "Type in digits separated by comma:"
 @array = gets.chomp.split(",").map(&:to_i)
@@ -11,15 +12,15 @@ def solution(a)
   divisors = reversed_number_divisors(size)
   blocks = 1
   divisors.each do |val|
-  	next if val > peak_indexes.length 
+    next if val > peak_indexes.length 
     el_block = size / val 
     have_peaks = true
     peak_indexes.each_slice(el_block) do |block|
       break have_peaks = false unless block.include?(true)
     end
-	break blocks = val unless have_peaks == false
+    break blocks = val unless have_peaks == false
   end
-  return blocks
+  blocks
 end
 
 def reversed_number_divisors(size)
@@ -46,7 +47,7 @@ def is_peak?(first, middle ,last)
   first < middle && middle > last
 end
 
-puts "Has exactly #{solution(@array)} peak(s)!"
+p "Has exactly #{solution(@array)} peak(s)!"
 
 require 'minitest/autorun'
 

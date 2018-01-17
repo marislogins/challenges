@@ -1,4 +1,6 @@
 #!/usr/bin/env ruby
+# Example first variable: 3, 8, 9, 7, 6
+# Example second variable: 3
 
 puts "Type in digits separated by comma (start array):"
 @array = gets.chomp.split(",").map(&:to_i)
